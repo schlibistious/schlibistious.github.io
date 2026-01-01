@@ -5,24 +5,70 @@
                 background-color: rgb(250, 240, 210);
             }
 
-            img {
-                width: 25%;
-                height: 35%;
+            .button {
+                width: 400px;
+                height: 300px;
 
                 border: 5px solid rgb(231, 137, 137);
                 border-radius: 8px;
 
                 transition: 150ms ease;
+
+                object-fit: cover;
             }
 
-            img:hover {
+            .button:hover {
                 scale: 1.01;
             }
+
+            .container {
+                position: relative;
+            }
+
+            .title {
+                position: relative;
+                bottom: 0px;
+                left: 0px;
+            }
+            #page {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .item {
+                width: auto;
+            }
+            #icon {
+                width: 130px;
+                height: 70px;
+            }
         </style>
-        <script src="script.js"></script>
     </head>
 
     <body>
-         <a href="https://tinyurl.com/yt3tm84w"><img src="img/Call-Ducks-4290038276.jpg" alt="ducks" id="1"></a>
+        <a href="schlibistious.github.io"><img src="Icon.jpg" alt="schlibistious" id="icon"></a>
+
+        <div id="page">
+            <div class="item">
+                <a href="schlibistious.github.io?id=1" class="link" id="1">
+                    <img src="img/CallOfTheDucks.jpg" alt="ducks" id="1" class="button">
+
+                    <div class="container">
+                        <p class="title">Call of the Ducks</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="item">
+                <a href="schlibistious.github.io?id=2" class="link" id="2">
+                    <img src="img/DucksDeploy.jpg" alt="ducks" id="2" class="button">
+
+                    <div class="container">
+                        <p class="title">THE DUCKS DEPLOY!!!</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+
     </body>
 </html>
