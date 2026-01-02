@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <style>
+            body {
+                background-color: rgb(250, 240, 210);
+            }
+
+            .button {
+                width: 400px;
+                height: 300px;
+
+                border: 5px solid rgb(231, 137, 137);
+                border-radius: 8px;
+
+                transition: 150ms ease;
+
+                object-fit: cover;
+            }
+
+            .button:hover {
+                scale: 1.01;
+            }
+
+            .container {
+                position: relative;
+            }
+
+            .title {
+                position: relative;
+                bottom: 0px;
+                left: 0px;
+            }
+            #page {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            .item {
+                width: auto;
+            }
+            #icon {
+                width: 130px;
+                height: 70px;
+
+                border: 5px solid;
+                border-color: rgb(237, 183, 118);
+                border-radius: 8px;
+            }
+        </style>
+        <script src="homePage.js"></script>
+    </head>
+
+    <body>
+        <a href="/"><img src="Icon.jpg" alt="schlibistious" id="icon"></a> <a href="/image_submit"><button>submit photos here!</button></a>
+
+        <div id="page">
+
+
+        </div>
+
+    </body>
+</html>

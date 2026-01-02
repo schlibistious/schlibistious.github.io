@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            #icon {
+                width: 130px;
+                height: 70px;
+
+                border: 5px solid;
+                border-color: rgb(237, 183, 118);
+                border-radius: 8px;
+            }
+            body {
+                background-color: aquamarine;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="/"><img src="../Icon.jpg" alt="schlibistious" id="icon"></a> <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdr_P0J4FuAKSv3GCodMg2tqrW0mfpGvUVdn1qGclMqIrdhw/viewform?usp=publish-editor"><button>submit photos here!</button></a>
+        <form 
+            action="/img" method="post" enctype="multipart/form-data"
+        >
+            <h1>SUBMIT YOUR DUCK PHOTOS</h1>
+            <label for="post_name">Choose a Name</label>
+            <input type="text" id="post_name" name="post_name">
+
+            <label for="post_desc">Choose a Description</label>
+            <input type="text" id="post_desc" name="post_desc">
+
+            <label for="post">Choose an Image</label>
+            <input type="file" id="post" name="post">
+
+
+            <button type="submit" id="submit">submit</button>
+        </form>
+    </body>
+</html>
