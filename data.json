@@ -1,0 +1,28 @@
+{
+  "Posts": [
+    {
+      "directory": "img/CallOfTheDucks.jpg",
+      "Id": 1,
+      "name": "Call Of The Ducks",
+      "description": "THE CALL OF THE DUCKS RAAAAAAH SO SCARY!!! first image ever posted on schlibistious."
+    },
+    {
+      "directory": "img/DucksDeploy.jpg",
+      "Id": 2,
+      "name": "The Ducks Deploy",
+      "description": "the ducks deploy for war against the seagulls... who will win?"
+    },
+    {
+      "directory": "img/duck___duck__goose____-1767316642911.jpg",
+      "Id": 1767316642918,
+      "name": "duck.. duck? GOOSE!!!!",
+      "description": "THERE IS AN IMPOSTER AMONG US"
+    },
+    {
+      "directory": "img/epik_duk-1767326876763.jpeg",
+      "Id": 1767326876767,
+      "name": "EPIK DUK",
+      "description": "TEH EPIK DUK IS COMING!!!! (ROFL)"
+    }
+  ]
+}
