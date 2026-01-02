@@ -10,7 +10,7 @@ function getParam(a) {
 
 //does the stuff
 async function doTheStuff() {
-    const data = await fetch('http://localhost:3000/data');
+    const data = await fetch('/data');
     const json = await data.json();
     images = json.Posts;
     console.log(images);
