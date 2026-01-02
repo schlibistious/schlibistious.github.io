@@ -22,7 +22,7 @@ async function doTheStuff() {
     } else {
         setTimeout(() => {
             let currentImage = images.find(post => post.Id == getParam(currentUrl));
-            document.getElementById('image_display').src = 'http://localhost:3000/' + currentImage.directory;
+            document.getElementById('image_display').src = '/' + currentImage.directory;
             document.getElementById('description').innerHTML = currentImage.description;
         }, 100);
     }
