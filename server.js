@@ -41,10 +41,12 @@ const upload = multer({ storage });
 //recieve and set inputs
 app.post("/img", upload.single('posts'), (req, res) => {
 
+    const ext = path.extname(req.file.originalname).toLowerCase();
+
       // Fix 1: Use req.files.post[0] for fields()
-    const file = req.file.post[0];
+    const file = req.file
     const storedFilename = file.filename;  // e.g. 'call_of_the_ducks-17123456789.jpg'
-    if (path.extname(file.originalname).toLowerCase() !== '.png' || '.jpg' || '.svg' || '.gif' || '.jpeg') {
+    if (![".jpg", ".jpeg", ".png", ".svg", ".gif"].includes(ext)) {
         res.send('Incorrect file format. Supported formats are: png, jpg, svg, and gif. Make sure the name of your file has no dots. :P');
         return null;
     } else {
@@ -119,7 +121,8 @@ app.get("/data", (req, res) => {
     //reads json
     fs.readFile("data.json", (err, data) => {
         if (err) {
-            console.log("attempt to read json failed! D:");
+            console.log("attempt to read json failed! D: => " + err);
+            return;
         }
         //translates
         posts = JSON.parse(data);
@@ -129,4 +132,5 @@ app.get("/data", (req, res) => {
     console.log('requests from', req.url);
     
 });
+
 
