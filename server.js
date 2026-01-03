@@ -11,7 +11,7 @@ let postName;
 let postDesc;
 let posts;
 let rawName;
-
+let pass = false;
 
 
 
@@ -24,10 +24,14 @@ const storage = multer.diskStorage({
     },
     //convert filename
     filename: (req, file, cb) => {
-        const ext = path.extname(file.originalname);
-        const rawName = req.body.post_name || "duck";
-        const safe = rawName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-        cb(null, safe + "-" + Date.now() + ext);
+        setTimeout(() => {
+            if (pass == true) {
+                const ext = path.extname(file.originalname);
+                const rawName = req.body.post_name || "duck";
+                const safe = rawName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+                cb(null, safe + "-" + Date.now() + ext);
+            };
+        }, 200);
     }
 });
 
@@ -35,30 +39,33 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 //recieve and set inputs
-app.post("/img", upload.fields([{name: 'post', maxCount: 1}, {name: 'post_name', maxCount: 1}, {name: 'post_desc', maxCount:1}]), (req, res) => {
+app.post("/img", upload.single('posts'), (req, res) => {
 
       // Fix 1: Use req.files.post[0] for fields()
-    const file = req.files.post[0];
+    const file = req.file.post[0];
     const storedFilename = file.filename;  // e.g. 'call_of_the_ducks-17123456789.jpg'
-    const directory = "img/" + storedFilename;
+    if (path.extname(file.originalname).toLowerCase() !== '.png' || '.jpg' || '.svg' || '.gif' || '.jpeg') {
+        res.send('Incorrect file format. Supported formats are: png, jpg, svg, and gif. Make sure the name of your file has no dots. :P');
+        return null;
+    } else {
+        pass = true;
+        const directory = "img/" + storedFilename;
 
-    console.log('post requests from', req.url);
-    console.log('upload successful!');
+        console.log('post requests from', req.url);
+        console.log('upload successful!');
 
-    postName = req.body.post_name;
-    postDesc = req.body.post_desc;
+        postName = req.body.post_name;
+        postDesc = req.body.post_desc;
 
-    console.log(rawName, postName, postDesc); // rawName now matches filename base
+        console.log(rawName, postName, postDesc); // rawName now matches filename base
 
-    //writes data to table
-    const newPost = {
-        directory: directory,
-        Id: Date.now(),
-        name: postName,
-        description: postDesc
-    }
-
-
+        //writes data to table
+        const newPost = {
+            directory: directory,
+            Id: Date.now(),
+            name: postName,
+            description: postDesc
+        }
     //edit json data
     fs.readFile("data.json", (err, data) => {
         if (err) {
@@ -70,7 +77,6 @@ app.post("/img", upload.fields([{name: 'post', maxCount: 1}, {name: 'post_name',
 
         if (!Array.isArray(posts.Posts)) posts.Posts = [];
         posts.Posts.push(newPost);
-
         fs.writeFile("data.json", JSON.stringify(posts, null, 2), (err2) => {
             if (err2) {
                 console.log("attempt to write json failed! D:", err2);
@@ -82,6 +88,10 @@ app.post("/img", upload.fields([{name: 'post', maxCount: 1}, {name: 'post_name',
             res.sendFile('./client/image_submit/success.html', { root: __dirname });
         });
     });
+    };
+
+
+
 }); 
 
 //listen
