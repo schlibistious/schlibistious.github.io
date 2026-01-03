@@ -11,7 +11,6 @@ let postName;
 let postDesc;
 let posts;
 let rawName;
-let pass = false;
 
 
 
@@ -24,14 +23,10 @@ const storage = multer.diskStorage({
     },
     //convert filename
     filename: (req, file, cb) => {
-        setTimeout(() => {
-            if (pass == true) {
-                const ext = path.extname(file.originalname);
-                const rawName = req.body.post_name || "duck";
-                const safe = rawName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
-                cb(null, safe + "-" + Date.now() + ext);
-            };
-        }, 200);
+        const ext = path.extname(file.originalname);
+        const rawName = req.body.post_name || "duck";
+        const safe = rawName.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+        cb(null, safe + "-" + Date.now() + ext);
     }
 });
 
@@ -39,7 +34,7 @@ const storage = multer.diskStorage({
 const upload = multer({ storage });
 
 //recieve and set inputs
-app.post("/img", upload.single('posts'), (req, res) => {
+app.post("/img", upload.single('post'), (req, res) => {
 
     const ext = path.extname(req.file.originalname).toLowerCase();
 
@@ -50,7 +45,6 @@ app.post("/img", upload.single('posts'), (req, res) => {
         res.send('Incorrect file format. Supported formats are: png, jpg, svg, and gif. Make sure the name of your file has no dots. :P');
         return null;
     } else {
-        pass = true;
         const directory = "img/" + storedFilename;
 
         console.log('post requests from', req.url);
