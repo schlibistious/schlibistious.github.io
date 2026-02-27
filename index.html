@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            @font-face {
+                font-family: "Winter Draw";
+                src: url(Fonts/Winter\ Draw.ttf);
+            }
+            @font-face {
+                font-family: "Roboto";
+                src: url(Fonts/Roboto-VariableFont_wdth\,wght.ttf);
+            }
+            body {
+                background-color: rgb(52, 149, 218);
+                background-image: url(Harold-background.jpg);
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+            }
 
+            .Page-Title {
+                -webkit-text-fill-color: rgb(23, 240, 52);
+                font-family: 'Winter Draw';
+                text-align: center;
+                font-size: 5vw; /* Responsive font size */
+            }
+
+            .Page-Header {
+                font-family: "Roboto";
+                text-align: center;
+                font-size: 3vw; /* Responsive font size */
+            }
+
+            .section {
+                position: relative;
+                width: 80%; /* Use relative width */
+                max-width: 2000px; /* Set a max width */
+                margin: 0 auto; /* Center the section */
+                margin-bottom: 2%;
+                background: rgba(52, 96, 218, 0.2);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                border: 1px solid rgba(52, 96, 218, 0.3);
+                padding: 20px; /* Add padding */
+                -webkit-text-fill-color: aliceblue;
+            }
+
+            /* Media Queries for Different Screen Sizes */
+            @media (max-width: 768px) {
+                .Page-Title {
+                    font-size: 8vw; /* Larger font size for smaller screens */
+                }
+
+                .Page-Header {
+                    font-size: 5vw; /* Larger font size for smaller screens */
+                }
+                
+                .section {
+                    padding: 10px; /* Less padding on smaller screens */
+                }
+            }
+
+            @media (max-width: 480px) {
+                .Page-Title {
+                    font-size: 10vw; /* Even larger font size for mobile */
+                }
+
+                .Page-Header {
+                    font-size: 6vw; /* Larger font size for mobile */
+                }
+            }
+            .social-icon {
+                width: 3%;
+                height: 3%;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <a href="https://youtube.com/@funkybanaboi?si=C-8eYJF-i-Pw8Spr"><img src="img/yticon.png" alt="yt-icon" class="social-icon"></a>
+
+        <h1 class="Page-Title">Schlibistious</h1>
+        <h3 class="Page-Header">my really epic website!</h3>
+
+        <div class="section" id="demo">
+            <h1>WHY THIS WEBSITE EXISTS</h1>
+            <h2>------------------------</h2>
+
+            <p>1. because I'm unemployed</p>
+            <p>2. because I need money</p>
+            <p>3. because I want to help people that need help with the most random things needing really random tutorials</p>
+            <p>4. because I like websites and open source projects.</p>
+            <p></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;But the real question is... WHY DOESN'T THIS WEBSITE EXIST?? We all have those moments in life where we are just in such a random predicament that we just NEED someone to walk them through. That's why I made this project.
+                Me and my helpers can teach you random life skills like how to always open a water bottle first try, the best ways to cut an apple, and so much more.
+            </p>
+            <p></p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;I made this project not because I'm just good at doing everything non-chalantly (even though I am), but because I just like doing things like this. Making a frontend website isn't like all other coding languages where it takes 5 hours to debug every new feature you add,
+                instead it just works most of the time. Once you get the hang of each keyword, function, and stop forgetting almost every single CSS property, it's like you have the power to do just evrything on your own. Yes there will be projects where you go insane and end up asking an ai chatbot
+                to help you fix your code, but sometimes that's just the fun of figuring things out. I incourage you to try and make something useful if you code or don't, because when you look back at it and see all you've created, it just feels so good.
+            </p>
+        </div>
+
+        <h3 class="Page-Header">random opinions</h2>
+        <div class="section" id="limes">limes are overrated and have no purpose but to be bitter lemons</div>
+        <div class="section" id="chocolate">why does dark chocolate exist by itself</div>
+        <div class="section" id="dates">dried dates are literally disgusting</div>
+        <div class="section" id="watermelon">watermelons are horrible outside of summer</div>
+        <div class="section" id="metal?">metal tastes good sometimes</div>
+        <div class="section" id="ads">we do not care if you use an ad blocker :)</div>
+    </body>
+</html>
