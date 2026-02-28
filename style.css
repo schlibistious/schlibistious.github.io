@@ -1,0 +1,113 @@
+@font-face {
+    font-family: "Winter Draw";
+    src: url(Fonts/Winter\ Draw.ttf);
+}
+@font-face {
+    font-family: "Roboto";
+    src: url(Fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+body {
+    background-color: rgb(52, 149, 218);
+    background-image: url(Harold-background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.Page-Title {
+    -webkit-text-fill-color: rgb(23, 240, 52);
+    font-family: 'Winter Draw';
+    text-align: center;
+    font-size: 5vw; /* Responsive font size */
+}
+
+.Page-Header {
+    font-family: "Roboto";
+    text-align: center;
+    font-size: 3vw; /* Responsive font size */
+}
+
+.section {
+    position: relative;
+    width: 80%; /* Use relative width */
+    max-width: 2000px; /* Set a max width */
+    margin: 0 auto; /* Center the section */
+    margin-bottom: 2%;
+    background: rgba(52, 96, 218, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(52, 96, 218, 0.3);
+    padding: 20px; /* Add padding */
+    -webkit-text-fill-color: aliceblue;
+    font-size: x-large;
+}
+
+/* Media Queries for Different Screen Sizes */
+@media (max-width: 768px) {
+    .Page-Title {
+        font-size: 8vw; /* Larger font size for smaller screens */
+    }
+
+    .Page-Header {
+        font-size: 5vw; /* Larger font size for smaller screens */
+    }
+    
+    .section {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .Page-Title {
+        font-size: 10vw; /* Even larger font size for mobile */
+    }
+
+    .Page-Header {
+        font-size: 6vw; /* Larger font size for mobile */
+    }
+}
+.social-icon {
+    width: 3%;
+    height: 3%;
+}
+#blog-link {
+    height: 100%;
+    width: 40%;
+    min-height: 10%;
+    background-color: chartreuse;
+    background: rgb(127, 255, 0, 0.9);
+    border-radius: 10px;
+    border: 5px, solid;
+    font-size: xx-large;
+    font-family: "Winter Draw";
+    font: bold;
+}
+.center-container {
+    text-align: center;
+    height: 100px;
+}
+.tutorial {
+    display: flex;
+    align-items: center;   /* centers vertically */
+    gap: 15px;             /* space between image and text */
+    position: relative;
+    width: 80%; /* Use relative width */
+    max-width: 2000px; /* Set a max width */
+    margin: 0 auto; /* Center the section */
+    margin-bottom: 2%;
+    background: rgba(52, 96, 218, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(52, 96, 218, 0.3);
+    padding: 20px; /* Add padding */
+    -webkit-text-fill-color: aliceblue;
+    font-size: x-large;
+}
+.container {
+    height: 500px;
+    width: 500px;
+}
