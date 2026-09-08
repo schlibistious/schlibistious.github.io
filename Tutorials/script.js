@@ -26,7 +26,7 @@ function search(q){
 
             let newImg = document.createElement("img");
             newDiv.appendChild(newImg);
-            newImg.src = tutorialList[j].directory + "Thumbnail.jpg";
+            newImg.src = tutorialList[j].directory + tutorialList[j].thumbnail;
             newImg.loading = "lazy";
             newImg.alt = tutorialList[j].alt;
             newImg.className = "Thumbnail"
