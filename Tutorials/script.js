@@ -1,10 +1,12 @@
-let tutorialList = [
-    {name:"Different ways to use a lemon", directory:"DifferentWaysToUseALemon/", alt:"lemon"}, 
-    {name:"How to take a lemon off of your head", directory:"howToTakeALemonOffOfYourHead/", alt:"lemon"},
-    {name:"How to Make a Website :D!!", directory:"howToMakeAWebsite/", alt:"car"}, //REMEMBER TO PUT A / AFTER THE NAME!!!!!!!!!!!!!!!!!
-    {name:"How to Make a Lavacast", directory:"howToMakeALavacastInMinecraft/", alt:"minecraft lavacast"} //REMEMBER TO MAKE SURE THAT YOUR THUMBNAIL IS "Thumbnail.jpg" AND NOT "Thumbnail.png"
-    // {name:"name", directory:"template", alt:"template"}
-]
+let tutorialList = [];
+
+fetch('list.json')
+  .then(response => response.json())
+  .then(data => {
+    tutorialList = data;
+    search("");
+  })
+  .catch(err => console.error("Failed to load tutorial list:", err));
 
 function search(q){
     let tutorials = document.getElementsByClassName("tutorial");
@@ -24,7 +26,8 @@ function search(q){
 
             let newImg = document.createElement("img");
             newDiv.appendChild(newImg);
-            newImg.src = tutorialList[j].directory + "Thumbnail.jpg";
+            newImg.src = tutorialList[j].directory + tutorialList[j].thumbnail;
+            newImg.loading = "lazy";
             newImg.alt = tutorialList[j].alt;
             newImg.className = "Thumbnail"
             document.body.appendChild(newElement);
