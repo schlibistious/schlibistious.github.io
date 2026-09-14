@@ -22,5 +22,11 @@
         "directory": "howToMakeALavacastInMinecraft/",
         "alt": "minecraft lavacast",
         "thumbnail": "Thumbnail.jpg"
+    },
+    {
+        "name": "What's a VPN",
+        "directory": "whatsAVPN/",
+        "alt": "jimmy",
+        "thumbnail": "Thumbnail.jpeg"
     }
 ]
