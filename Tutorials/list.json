@@ -28,5 +28,11 @@
         "directory": "whatsAVPN/",
         "alt": "jimmy",
         "thumbnail": "Thumbnail.jpeg"
+    },
+    {
+        "name": "How to Fold a Paper Boat",
+        "directory": "howToFoldAPaperBoat/",
+        "alt": "paper boat",
+        "thumbnail": "Thumbnail.jpg"
     }
 ]
