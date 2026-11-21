@@ -1,42 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>https://schlibistious.github.io/</loc>
-  <lastmod>2026-02-28T01:29:34+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://schlibistious.github.io/Tutorials/index.html</loc>
-  <lastmod>2026-02-28T01:29:34+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://schlibistious.github.io/index.html</loc>
-  <lastmod>2026-02-28T01:29:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://schlibistious.github.io/Tutorials/howToTakeALemonOffOfYourHead/index.html</loc>
-  <lastmod>2026-02-28T01:29:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://schlibistious.github.io/Tutorials/howToMakeAWebsite/index.html</loc>
-  <lastmod>2026-02-28T01:29:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://schlibistious.github.io/Tutorials/DifferentWaysToUseALemon/index.html</loc>
-  <lastmod>2026-02-28T01:29:34+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.schlibistious.com/</loc>
+    <lastmod>2026-10-05</lastmod>
+  </url>
+  <url>
+    <loc>https://schlibistious.com/Tutorials/</loc>
+    <lastmod>2026-09-28</lastmod>
+  </url>
+  <url>
+    <loc>https://schlibistious.com/Tutorials/DifferentWaysToUseALemon/</loc>
+    <lastmod>2026-09-22</lastmod>
+  </url>
+  <url>
+    <loc>https://schlibistious.com/Tutorials/howToMakeALavacastInMinecraft/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://schlibistious.com/Tutorials/howToMakeAWebsite/</loc>
+    <lastmod>2026-09-23</lastmod>
+  </url>
+  <url>
+    <loc>https://schlibistious.com/Tutorials/howToFoldAPaperBoat/</loc>
+    <lastmod>2026-10-01</lastmod>
+  </url>
+  <url>
+    <loc>https://schlibistious.com/Tutorials/howToTakeALemonOffOfYourHead/</loc>
+    <lastmod>2026-09-21</lastmod>
+  </url>
+  <url>
+    <loc>https://schlibistious.com/Tutorials/whatsAVPN/</loc>
+    <lastmod>2026-09-21</lastmod>
+  </url>
+  <url>
+    <loc>https://schlibistious.com/etch/</loc>
+    <lastmod>2026-09-24</lastmod>
+  </url>
+  <url>
+    <loc>https://schlibistious.com/pufferfish-game/</loc>
+    <lastmod>2026-09-29</lastmod>
+  </url>
 </urlset>
+
