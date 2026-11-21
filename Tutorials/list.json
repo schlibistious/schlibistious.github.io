@@ -4,5 +4,11 @@
         "directory": "howToMakeALavacastInMinecraft/",
         "alt": "minecraft lavacast",
         "thumbnail": "Thumbnail.jpg"
+    },
+    {
+        "name": "How to Clean (sanitize) a Sponge",
+        "directory": "howToCleanASponge/",
+        "alt": "sponge",
+        "thumbnail": "vinegar.JPG"
     }
 ]
