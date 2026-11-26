@@ -142,3 +142,7 @@ input{
     -webkit-text-fill-color: aliceblue;
     font-size: x-large;
 }
+
+#fishgif{
+    width: 100%;
+}
